@@ -33,7 +33,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>3</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="open_page">
        <widget class="QLabel" name="label">
@@ -271,11 +271,16 @@
        <widget class="QLabel" name="label_10">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>50</y>
+          <x>310</x>
+          <y>20</y>
           <width>221</width>
           <height>61</height>
          </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>26</pointsize>
+         </font>
         </property>
         <property name="text">
          <string>추천결과</string>
