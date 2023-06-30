@@ -114,11 +114,13 @@ unique_values = md['genres'].unique()
 #
 # # 호러 영화 순위 반환
 # print(build_chart('Horror').head(15))
+# ===================여기서부터 ======================================
 
 # 내용 기반으로 영화 추천하기 - 영화의 속성값 저장
 # TF-IDF를 연산할 때 데이터에 Null 값이 들어가면 에러가 발생한다. 결측값에 해당하는 Null 값 확인하고 지워줌
 id_not_null_df = pd.read_csv('tmdb_5000_movies.csv')
-id_not_null_df = id_not_null_df[id_not_null_df['id'].notnull()]['id'].astype('int')
+con_id_not_null = id_not_null_df['id'].notnull()
+id_not_null_df = id_not_null_df[con_id_not_null]['id'].astype('int')
 # md = md.drop([[19730, 19530, 35587]])
 md['id'] = md['id'].astype('int')
 smd = md[md['id'].isin(id_not_null_df)]
@@ -235,6 +237,7 @@ def improved_recommendations(title):
     vote_averages = movies[movies['vote_average'].notnull()]['vote_average'].astype('int')
     C = vote_averages.mean()
     m = vote_counts.quantile(0.60)
+
     qualified = movies[
         (movies['vote_count'] >= m) & (movies['vote_count'].notnull()) & (movies['vote_average'].notnull())]
     qualified.loc[:, 'vote_count'] = qualified['vote_count'].astype('int')

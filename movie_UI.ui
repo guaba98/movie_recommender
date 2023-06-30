@@ -181,19 +181,6 @@
        <zorder>label_5</zorder>
       </widget>
       <widget class="QWidget" name="main_page_1">
-       <widget class="QLabel" name="label_8">
-        <property name="geometry">
-         <rect>
-          <x>20</x>
-          <y>20</y>
-          <width>231</width>
-          <height>91</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>재미있게 본 영화를 선택하세요!</string>
-        </property>
-       </widget>
        <widget class="QLabel" name="label_9">
         <property name="geometry">
          <rect>
@@ -226,7 +213,7 @@
          <string notr="true">background-color: rgb(218, 218, 218);</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="check_btn">
         <property name="geometry">
          <rect>
           <x>500</x>
@@ -261,19 +248,59 @@
          <bool>true</bool>
         </property>
        </widget>
-       <zorder>label_6</zorder>
-       <zorder>label_8</zorder>
-       <zorder>label_9</zorder>
-       <zorder>widget</zorder>
-       <zorder>pushButton</zorder>
-      </widget>
-      <widget class="QWidget" name="main_page_2">
-       <widget class="QLabel" name="label_10">
+       <widget class="QWidget" name="verticalLayoutWidget">
         <property name="geometry">
          <rect>
-          <x>310</x>
+          <x>10</x>
           <y>20</y>
           <width>221</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>추천받고 싶은 영화 장르를 선택하세요!</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>추천받고 싶은 영화 갯수는 </string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox">
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <zorder>label_6</zorder>
+       <zorder>label_9</zorder>
+       <zorder>widget</zorder>
+       <zorder>check_btn</zorder>
+       <zorder>verticalLayoutWidget</zorder>
+      </widget>
+      <widget class="QWidget" name="main_page_2">
+       <widget class="QLabel" name="movie_result">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>771</width>
           <height>61</height>
          </rect>
         </property>
@@ -287,6 +314,62 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>771</width>
+          <height>471</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 100), stop:0.166 rgba(255, 255, 0, 100), stop:0.333 rgba(0, 255, 0, 100), stop:0.5 rgba(0, 255, 255, 100), stop:0.666 rgba(0, 0, 255, 100), stop:0.833 rgba(255, 0, 255, 100), stop:1 rgba(255, 0, 0, 100));
+</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QTableWidget" name="tableWidget">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);</string>
+           </property>
+           <column>
+            <property name="text">
+             <string>제목</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>번역제목</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>연도</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>평점</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="re_check_btn">
+        <property name="geometry">
+         <rect>
+          <x>710</x>
+          <y>40</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>다시 확인</string>
         </property>
        </widget>
       </widget>
