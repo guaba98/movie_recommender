@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>811</width>
-    <height>582</height>
+    <width>810</width>
+    <height>580</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -33,7 +33,7 @@
     <item>
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="open_page">
        <widget class="QLabel" name="label">
@@ -157,7 +157,7 @@
         <property name="geometry">
          <rect>
           <x>290</x>
-          <y>450</y>
+          <y>460</y>
           <width>151</width>
           <height>41</height>
          </rect>
@@ -168,7 +168,8 @@
          </font>
         </property>
         <property name="text">
-         <string>자자 영화추천이 공짜</string>
+         <string>아아 영화추천이 공짜
+싸다싸</string>
         </property>
        </widget>
        <zorder>label_2</zorder>
@@ -180,8 +181,128 @@
        <zorder>label_4</zorder>
        <zorder>label_5</zorder>
       </widget>
+      <widget class="QWidget" name="main_page_0">
+       <widget class="QLabel" name="label_10">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>160</y>
+          <width>241</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>32</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>선택하세요 </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>260</y>
+          <width>421</width>
+          <height>171</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="recommend_for_movie">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>유사한 영화 추천</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="recommend_for_genre">
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>장르 추천</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_12">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>811</width>
+          <height>591</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>img/포로리.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <zorder>label_12</zorder>
+       <zorder>label_10</zorder>
+       <zorder>horizontalLayoutWidget_2</zorder>
+      </widget>
       <widget class="QWidget" name="main_page_1">
-       <widget class="QLabel" name="label_9">
+       <widget class="QLabel" name="go_to_openpage">
         <property name="geometry">
          <rect>
           <x>630</x>
@@ -209,9 +330,55 @@
           <height>441</height>
          </rect>
         </property>
+        <property name="minimumSize">
+         <size>
+          <width>791</width>
+          <height>441</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>791</width>
+          <height>441</height>
+         </size>
+        </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(218, 218, 218);</string>
         </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>789</width>
+              <height>439</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
        </widget>
        <widget class="QPushButton" name="check_btn">
         <property name="geometry">
@@ -259,7 +426,7 @@
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_2">
          <item>
-          <widget class="QLabel" name="label_8">
+          <widget class="QLabel" name="text_info">
            <property name="text">
             <string>추천받고 싶은 영화 장르를 선택하세요!</string>
            </property>
@@ -289,7 +456,7 @@
         </layout>
        </widget>
        <zorder>label_6</zorder>
-       <zorder>label_9</zorder>
+       <zorder>go_to_openpage</zorder>
        <zorder>widget</zorder>
        <zorder>check_btn</zorder>
        <zorder>verticalLayoutWidget</zorder>

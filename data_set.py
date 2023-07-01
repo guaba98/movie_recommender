@@ -63,6 +63,7 @@ s.name = 'genre'
 gen_md = md.drop('genres', axis=1).join(s)  # md의 genres열을 분리해서 새 gen_md 열을 생성함.
 # print(gen_md)
 
+print(qualified.sort_values('wr'))
 
 # stack 메서드를 사용해 새로운 시리즈를 하나의 열로 쌓음.
 # reset_index 메소드를 사용해 새로운 데이터프레임의 인덱스를 레벨 1로 재설정하고 원래 genres 열 삭제

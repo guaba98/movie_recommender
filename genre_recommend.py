@@ -68,15 +68,3 @@ def calculate_wr(vote_count, vote_average, m, C):
     return (vote_count / (vote_count + m) * vote_average) + (m / (m + vote_count) * C)
 
 
-# top_five_result = build_chart('Romance').head(10)
-# print(top_five_result)
-#
-#
-# translator = Translator()
-# for i in top_five_result['title']:
-#     result = translator.translate(i, dest='ko')
-#     print(result.text)
-
-# # print(detected.lang)
-#
-# print(result.text)
