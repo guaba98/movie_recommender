@@ -8,8 +8,8 @@ from googletrans import Translator
 
 
 # 자료 읽어오기
-md2 = pd.read_csv('tmdb_5000_credits.csv')
-md = pd.read_csv('tmdb_5000_movies.csv')
+md2 = pd.read_csv('data/tmdb_5000_credits.csv')
+md = pd.read_csv('data/tmdb_5000_movies.csv')
 md2.columns = ['id','tittle','cast','crew']
 md= md.merge(md2,on='id')
 

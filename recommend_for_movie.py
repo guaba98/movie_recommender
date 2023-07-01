@@ -6,12 +6,12 @@ from nltk.stem.snowball import SnowballStemmer
 from ast import literal_eval
 
 # 자료 읽어오기
-md2 = pd.read_csv('tmdb_5000_credits.csv')
-md = pd.read_csv('tmdb_5000_movies.csv')
+md2 = pd.read_csv('./data/tmdb_5000_credits.csv')
+md = pd.read_csv('./data/tmdb_5000_movies.csv')
 md2.columns = ['id', 'tittle', 'cast', 'crew']  # 4가지의 열만 지정
 md = md.merge(md2, on='id')  # md2의 id 기준으로 두 자료를 병합한다.
 
-id_not_null_df = pd.read_csv('tmdb_5000_movies.csv')
+id_not_null_df = pd.read_csv('./data/tmdb_5000_movies.csv')
 con_id_not_null = id_not_null_df['id'].notnull()  # 조건 생성(id가 null값이면 안 됨)
 id_not_null_df = id_not_null_df[con_id_not_null]['id'].astype('int')
 # print(id_not_null_df)

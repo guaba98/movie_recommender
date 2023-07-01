@@ -1,16 +1,14 @@
-
+from data import genres_dict
 from genre_recommend import build_chart
 from recommend_for_movie import get_recommendations
 from movie_recommender import *
-from data import genres_dict
 from googletrans import Translator
 import os
 import sys
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import *
 from PyQt5 import uic
-from PyQt5.QtGui import *
 from PyQt5.Qt import *
+from PyQt5.QtGui import *
 
 
 def resource_path(relative_path):
@@ -18,10 +16,10 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 # UI 불러오기
-form = resource_path('movie_UI.ui') # 메인창 ui
+form = resource_path('./UI/movie_UI.ui') # 메인창 ui
 form_class = uic.loadUiType(form)[0]
 
-loading_form = resource_path('loading_page.ui')
+loading_form = resource_path('./UI/loading_page.ui')
 loading_ui = uic.loadUiType(loading_form)[0]
 
 class Loading(QDialog, loading_ui):
@@ -32,8 +30,8 @@ class Loading(QDialog, loading_ui):
         self.parent = parent
 
         # gif 파일 불러와서 라벨에 불러줌
-        movie = QMovie('./img/search.gif')
-        self.loading_img.setPixmap(QPixmap('./img/search.gif'))
+        movie = QMovie('UI/img/search.gif')
+        self.loading_img.setPixmap(QPixmap('UI/img/search.gif'))
         self.loading_img.setMovie(movie)
         movie.start()
 
@@ -67,9 +65,10 @@ class WindowClass(QMainWindow, form_class):
         super( ).__init__( )
         self.setupUi(self)
         self.setWindowTitle('초간단 영화추천기')
-        self.setWindowIcon(QIcon('./img/bono_face.png'))
+        self.setWindowIcon(QIcon('UI/img/bono_face.png'))
         # self.setWindowIcon()
-        self.setCursor(QCursor(QPixmap('./img/bono_face.png').scaled(80, 80)))
+        self.setCursor(QCursor(QPixmap('UI/img/bono_face.png').scaled(80, 80)))
+        self.label_3.setPixmap(QPixmap('UI/img/remove_bono.png'))
 
 
         # 버튼 시그널 연결
